@@ -4,10 +4,10 @@ BUILD_DIR := ./build
 
 .PHONY: all
 
-all: build
+all: $(BUILD_DIR)/$(PROGNAME)
 
-build: $(BUILD_DIR)/$(PROGNAME)
-	go build -o $(BUILD_DIR)/$(PROGNAME) $(CMD_DIR)
+$(BUILD_DIR)/$(PROGNAME):
+	go build -o $@ $(CMD_DIR)
 
 .PHONY: clean
 clean:
