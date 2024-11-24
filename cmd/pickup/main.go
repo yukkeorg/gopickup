@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"pickup/lib/helper"
+	"pickup/helper"
 )
 
 func main() {
