@@ -1,14 +1,14 @@
 PROGNAME := pickup
 CMD_DIR := ./cmd/${PROGNAME}
-BUILD_DIR := ./build
+DIST_DIR := ./dist
 
 .PHONY: all
 
-all: $(BUILD_DIR)/$(PROGNAME)
+all: $(DIST_DIR)/$(PROGNAME)
 
-$(BUILD_DIR)/$(PROGNAME):
+$(DIST_DIR)/$(PROGNAME):
 	go build -o $@ $(CMD_DIR)
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -rf $(DIST_DIR)

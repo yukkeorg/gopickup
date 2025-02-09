@@ -1,14 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"os"
-
-	"pickup/helper"
+	"github.com/yukkeorg/pickup/pkg/app"
 )
 
 func main() {
-	data := helper.InputData(os.Stdin)
-	fmt.Println("--------------------")
-	fmt.Println(helper.PickRandom(data))
+	app.App()
 }
